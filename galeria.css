@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: var(--black);
+    user-select: none;
+}
+:root {
+    --white: #eee;
+    --lesswhite: #e2e2e2;
+    --black: #212121;
+    --lessblack: #707070;
+}
+body {
+    background: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main {
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.25); */
+}
+h1 {
+    font-size: 2.5em;
+    margin-top: .5em;
+    cursor: default;
+}
+div {
+    width: 30%;
+}
+.imgFormat {
+    max-width: 100%;
+    margin: 2.5em 0;
+    cursor: zoom-in;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.25); */
+}
+menu {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    gap: 2.5em;
+    padding: 0 15em;
+    /* background: brown; */
+}
+.images {
+    max-width: 100%;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: .75s;
+}
+.images:hover {
+    filter: grayscale(0);
+    /* transition: .5s; transition in */
+}
+figure svg, aside svg {
+    width: 3.5em;
+    cursor: pointer;
+    margin: 0 2.5em;
+}
+figure svg path, aside svg path {
+    fill: var(--black);
+    transition: .25s;
+}
+figure svg:hover path {
+    fill: var(--lessblack);
+}
+figure svg:active path {
+    fill: var(--black);
+    transition: none;
+}
+aside svg:hover path {
+    fill: darkred;
+}
+.selected {
+    filter: grayscale(0);
+    opacity: .675;
+    transition: none;
+    cursor: default;
+}
+.transition {
+    transition: .25s;
+}
+.expanded {
+    z-index: 9999;
+    cursor: zoom-out;
+}
+.newdiv {
+    width: 40%;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+aside {
+    display: none;
+    position: fixed;
+    top: 5%;
+    right: 20%;
+}
